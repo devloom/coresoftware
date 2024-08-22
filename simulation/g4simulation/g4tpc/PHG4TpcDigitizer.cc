@@ -458,12 +458,12 @@ void PHG4TpcDigitizer::DigitizeCylinderCells(PHCompositeNode *topNode)
 				}	
 			      // input voltage x 1024 channels over 2200 mV max range
 			      unsigned int adc_output  = (unsigned int) (input * 1024.0 / 2200.0);  
-
+			      /*
 			      if (input < 0) { adc_output = 0;
 }
 			      if (input > 1023) { adc_output = 1023;
 }
-			      
+			      */			      
 			      // Get the hitkey
 			      TrkrDefs::hitkey hitkey = TpcDefs::genHitKey(iphi, it + itup);
 			      TrkrHit *hit = nullptr;
