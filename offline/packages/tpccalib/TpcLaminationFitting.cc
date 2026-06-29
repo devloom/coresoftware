@@ -441,14 +441,14 @@ int TpcLaminationFitting::process_event(PHCompositeNode *topNode)
     {
       phi2pimod += 2 * M_PI;
     }
-    while(side && phi2pimod > M_PI / 9)
-    {
-      phi2pimod -= M_PI / 9;
-    }
-    while(!side && phi2pimod > M_PI / 18)
-    {
-      phi2pimod -= M_PI / 9;
-    }
+    // while(side && phi2pimod > M_PI / 9)
+    // {
+    //   phi2pimod -= M_PI / 9;
+    // }
+    // while(!side && phi2pimod > M_PI / 18)
+    // {
+    //   phi2pimod -= M_PI / 9;
+    // }
 
     m_hPetal[side]->Fill(phi2pimod, tmp_pos.Perp());
   }
